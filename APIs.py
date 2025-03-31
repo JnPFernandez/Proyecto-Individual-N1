@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter
 import pandas as pd
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import Response
 import json
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -8,9 +8,9 @@ from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
 # Cargamos los dataset
-movies = pd.read_csv("C:/Users/JuanPablo/Desktop/Kazan/Henry/PI_1/movies.csv")
-cast = pd.read_csv("C:/Users/JuanPablo/Desktop/Kazan/Henry/PI_1/cast.csv")
-crew= pd.read_csv("C:/Users/JuanPablo/Desktop/Kazan/Henry/PI_1/crew.csv")
+movies = pd.read_csv("movies.csv")
+cast = pd.read_csv("cast.csv")
+crew= pd.read_csv("crew.csv")
 
 # Aseguramos que las fechas estén en formato datetime
 movies["release_date"] = pd.to_datetime(movies["release_date"], errors="coerce")
