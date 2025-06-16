@@ -70,11 +70,8 @@ Y por último la función retorna el titulo, el año y el score.
 
 - En **get_director**, primero, del df de crew, filtramos unicamente donde indique que el trabajo es de director en la columna "crew_job" y buscamos que peliculas contienen al director. Luego calculamos el retorno total del director con returncon y la función .sum y la guardamos en la nueva variable float "retorno_total". Después un paso muy importante, cree la lista "peliculas_info" que luego la vamos a retornar. Use un for iterando sobre las peliculas del director, agregando con la función .append la información de cada pelicula a la lista "peliculas_info", información sería especificamente las columnas "title", "release_date", "returncon", "budget" y "revenue". Y por ultimo retornamos el nombre del director, su retorno total y la información sobre sus peliculas.
 
+# 📬 Contacto
 
-**"DEPLOYMENT"**: Use render para deployar mis APIs a traves de FastAPI.
+Correo: juanpablofernandez132@gmail.com
 
-
-**"EDA"**: Importe las librerías necesarias, leí los archivos csv guardados después del ETL. Use la función .info y .describe con cada df. Luego las funciones .isnull y .duplicated para revisar nulos y duplicados.  Grafique la relación entre budget y revenue. Hice un boxplot de revenue y luego un histograma donde se puede ver la frecuencia de los valores 0s en la columna. Y por último realize una nube de palabras con los titulos de las peliculas.
-
-
-**"SISTEMA DE RECOMENDACIÓN"**: Use las funciones lower y strip para no generar fallos entre mayusculas y minusculas, y para eliminar los espacios antes y después, para evitar también fallos. Luego cree un df "peliculas" con los datos del df movies que coincidian con el titulo insertado por el usuario. Luego cree el float "puntaje" con el "vote_average" de la pelicula ingresada. Después busque en el df movies peliculas con puntajes similadres (entre -0.1 y +0.1) guardandolas en un nuevo df llamado "peliculas_similares". Excluí la pelicula ingresada porque sino iba a aparecer en la respuesta al ser identica. Use un if por si el df "peliculas_similares" tenía más de 5 valores, lo cuál no debía de suceder, y en caso de que sea verdad use la función tf idf para convertir a vector los titulos asi se podía usar similitud de coseno.  En una nueva columna del df peliculas_similares, llamada "similaridad_titulo" inserte la suma de "similitudes"(que fue la calculada con similaridad de coseno). Después ordene este df "peliculas_similares" de mayor a menor con la función .sort_values según los valores "vote_average" y "similaridad_titulo". Y use el else por si habían pocas peliculas directamente se ordenaban por Vote_average. Luego retorne el df peliculas_similares en ["title] usando la función .head con los primeros 5 datos y convirtiendolo en diccionario con la función .to_dict
+LinkedIn: linkedin.com/in/juan-pablo-fernández-608a95217/
