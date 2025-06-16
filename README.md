@@ -1,6 +1,19 @@
-# <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
+# <h1 align="center">**`MVP Sistema de recomendación de peliculas`**</h1>
 
+# ✏️ Descripción del proyecto
+Este repositorio contiene un archivo .py con la codificación de las API´s para el funcionamiento del sistema de recomendación, un archivo jupyter notebook con el Análisis Exploratorio de los Datos, otro con el proceso de Extracción, Transformación y Carga de los datos. Los 3 archivos fuente en .csv. Y un archivo .txt con los requerimientos de las funciones. 
 
+# 🔎 Objetivos principales:
+
+- Analizar la evolución de los accesos por tecnología (ADSL, Cablemodem, Fibra Óptica) a través del tiempo.
+
+- Medir el KPI obligatorio: crecimiento mínimo de 2% de accesos por cada 100 hogares por provincia en el próximo trimestre.
+
+- Proponer y visualizar tres KPIs adicionales: participación de Fibra Óptica en el AMBA, cuota de mercado de Fibra óptica y cuota de mercado de Cablemodem por provincia.
+
+- Identificar oportunidades de despliegue y mejora en provincias menos saturadas.
+
+- 
 **"TRANSFORMACIONES"**: Para el dataset "Credits" lo dividi en 2, en Cast y Crew para un mejor manejo de la información. Solamente dejé las columnas de: "movie_id", "cast_id","cast_character","actor_id","cast_name" en el caso de Cast. 
 Y en el caso de Crew solamente: "movie_id", "crew_department", "crew_id", "crew_job" y "crew_name". Por otro lado del dataset Movies solamente use las columnas: "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average" y "vote_count"
 De cada Dataframe solamente dejé las primeras 2.000 filas. Luego rellene los campos de revenue y budget con 0, eliminé nulos de release_date y cree la nueva columna de return ("returncon"). Y cree la columna "release_year" con el año de "release_date".
