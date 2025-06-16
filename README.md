@@ -1,6 +1,7 @@
 # <h1 align="center">**`MVP Sistema de recomendación de peliculas`**</h1>
 
-# ✏️ Descripción del proyecto
+# ✏️ Descripción del proyecto+
+Este repositorio contiene todo lo necesario para hacer correr un sistema de recomendación. Yo lo corrí en Render. Este sistema toma datos de una gran cantidad de peliculas, y en base a eso, y al titulo de una pelicula ingresado por el usuariote recomienda 5. Por otro lado también tiene funciones para 
 Este repositorio contiene un archivo .py con la codificación de las API´s para el funcionamiento del sistema de recomendación, un archivo jupyter notebook con el Análisis Exploratorio de los Datos, otro con el proceso de Extracción, Transformación y Carga de los datos. Los 3 archivos fuente en .csv. Y un archivo .txt con los requerimientos de las funciones. 
 
 # 🔎 Objetivos principales:
