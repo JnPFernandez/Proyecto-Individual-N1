@@ -8,7 +8,39 @@ Este repositorio contiene todo lo necesario para hacer correr un sistema de reco
 - Saber la cantidad de votos de una pelicula en particular.  <br>
 
 # 🔎 Objetivos principales:
-Crear una interfaz gráfica con un sistema de recomendación que ayude a los usuarios a encontrar la pelicula que están buscando.
+Crear una interfaz gráfica con un sistema de recomendación que ayude a los usuarios a encontrar la película que están buscando.
+
+# 🗂️ Estructura del repositorio
+
+Proyecto-Individual-N1/
+
+├── APIs.py                   # Archivo con las funciones en python
+
+├── EDA.ipynb                 # Archivo con el informe EDA (Análisis Exploratorio de los Datos)
+
+├── ETL.ipynb                 # Archivo de Jupiter Notebook que contiene la Extracción, Transformación y Carga (Load) de los datos
+
+├── README.md                 # Documentación (este archivo)
+
+├── cast.csv                  # Archivo csv con la información de los elencos
+
+├── crew.csv                  # Archivo csv con la información de la "crew", tripulación en español literal, se refiere a los directores, creadores de efectos visuales, animadores, y demás personas que trabajaron en el detrás de escena
+
+├── movies.csv                # Archivo csv con la información de las películas
+
+└── requeriments.txt          # Archivo de texto con los requerimientos de las funciones
+
+# ⚙️ Tecnologías y Herramientas
+
+- **Power BI Desktop** (versión 2.139.2054.0 o superior)
+
+- **Excel** (para preparar y revisar datos)
+
+- **DAX** (medidas calculadas para KPIs)
+
+- **Jupyter Notebook** (para el análisis exploratorio)
+  
+- **Python 3.19** (librerías: Pandas, Matplotlib y Seaborn)
 
 **"TRANSFORMACIONES"**: Para el dataset "Credits" lo dividi en 2, en Cast y Crew para un mejor manejo de la información. Solamente dejé las columnas de: "movie_id", "cast_id","cast_character","actor_id","cast_name" en el caso de Cast. 
 Y en el caso de Crew solamente: "movie_id", "crew_department", "crew_id", "crew_job" y "crew_name". Por otro lado del dataset Movies solamente use las columnas: "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average" y "vote_count"
