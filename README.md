@@ -32,8 +32,7 @@ Proyecto-Individual-N1/
 
 # ⚙️ Tecnologías y Herramientas
 
-- **Power BI Desktop**
-- **DAX** (medidas calculadas para KPIs)
+- **Render** (para deployar las funciones)
 
 - **Jupyter Notebook** (para el EDA y el ETL)
   
