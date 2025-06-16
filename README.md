@@ -32,15 +32,12 @@ Proyecto-Individual-N1/
 
 # ⚙️ Tecnologías y Herramientas
 
-- **Power BI Desktop** (versión 2.139.2054.0 o superior)
-
-- **Excel** (para preparar y revisar datos)
-
+- **Power BI Desktop**
 - **DAX** (medidas calculadas para KPIs)
 
-- **Jupyter Notebook** (para el análisis exploratorio)
+- **Jupyter Notebook** (para el EDA y el ETL)
   
-- **Python 3.19** (librerías: Pandas, Matplotlib y Seaborn)
+- **Python 3.19** (librerías: FastAPI, APIRouter, pandas, JSONResponse, Response, json, cosine_similarity, TfidfVectorizer, MinMaxScaler y numpy)
 
 **"TRANSFORMACIONES"**: Para el dataset "Credits" lo dividi en 2, en Cast y Crew para un mejor manejo de la información. Solamente dejé las columnas de: "movie_id", "cast_id","cast_character","actor_id","cast_name" en el caso de Cast. 
 Y en el caso de Crew solamente: "movie_id", "crew_department", "crew_id", "crew_job" y "crew_name". Por otro lado del dataset Movies solamente use las columnas: "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average" y "vote_count"
