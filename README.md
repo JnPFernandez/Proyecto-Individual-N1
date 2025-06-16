@@ -44,6 +44,14 @@ Para el dataset "Credits" lo dividi en 2, en Cast y Crew para un mejor manejo de
 Y en el caso de Crew solamente: "movie_id", "crew_department", "crew_id", "crew_job" y "crew_name". Por otro lado del dataset Movies solamente use las columnas: "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average" y "vote_count". <br>
 De cada Dataframe solamente dejé las primeras 2.000 filas. Luego rellene los campos de revenue y budget con 0, eliminé nulos de release_date y cree la nueva columna de return ("returncon"). Y cree la columna "release_year" con el año de "release_date".
 
+# 📥 Instalación y Uso
+```
+git clone https://github.com/JnPFernandez/Proyecto-Individual-N1.git
+cd Proyecto-Individual-2
+```
+- Deployar en Render
+
+- Navegar las diferentes funciones
 
 **"DESARROLLO API"**: Genere las 6 funciones APIs. Importe las librerías de FastAPI, APIRouter, pandas, JSONResponse, Response, json, cosine_similarity, TfidfVectorizer, MinMaxScaler y numpy.
 Luego cargue los datasets. 
