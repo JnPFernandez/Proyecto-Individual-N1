@@ -7,6 +7,8 @@ Este repositorio contiene todo lo necesario para hacer correr un sistema de reco
 - Saber el score de una pelicula en particular.  <br>
 - Saber la cantidad de votos de una pelicula en particular.  <br>
 
+Demostración: https://www.youtube.com/watch?v=_sTEYiiFzbs
+
 # 🔎 Objetivos principales:
 Crear una interfaz gráfica con un sistema de recomendación que ayude a los usuarios a encontrar la película que están buscando.
 
