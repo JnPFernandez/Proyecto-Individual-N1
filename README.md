@@ -77,3 +77,5 @@ Y por último la función retorna el titulo, el año y el score.
 Correo: juanpablofernandez132@gmail.com
 
 LinkedIn: linkedin.com/in/juan-pablo-fernández-608a95217/
+
+Youtube: https://www.youtube.com/@JuanPabloFern%C3%A1ndez-e6e
