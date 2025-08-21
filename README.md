@@ -1,81 +1,93 @@
-# <h1 align="center">**`MVP Sistema de recomendación de peliculas`**</h1>
+<h1 align="center">**´MVP Movie Recommendation System´**</h1>
 
-# ✏️ Descripción del proyecto
-Este repositorio contiene todo lo necesario para hacer correr un sistema de recomendación. Yo lo corrí en Render. Este sistema toma datos de una gran cantidad de peliculas, y en base a eso, y al titulo de una pelicula ingresado por el usuariote recomienda 5. Por otro lado también tiene funciones para:  <br>
-- Saber que cantidad de peliculas que fueron estrenadas en un mes en particular.  <br>
-- Saber que cantidad de peliculas que fueron estrenadas en un dia en particular.  <br>
-- Saber el score de una pelicula en particular.  <br>
-- Saber la cantidad de votos de una pelicula en particular.  <br>
+# ✏️ Project Description
 
-Demostración: https://www.youtube.com/watch?v=_sTEYiiFzbs
+This repository contains everything needed to run a movie recommendation system. I deployed it on Render. This system processes data from a large number of movies and, based on that data and the title of a movie entered by the user, it recommends 5 similar ones.
+It also includes functions to:  <br>
+- Get the number of movies released in a specific month.  <br>
+- Get the number of movies released on a specific day.  <br>
+- Get the score of a particular movie.  <br>
+- Get the number of votes of a particular movie.  <br>
 
-# 🔎 Objetivos principales:
-Crear una interfaz gráfica con un sistema de recomendación que ayude a los usuarios a encontrar la película que están buscando.
+Demo: https://www.youtube.com/watch?v=_sTEYiiFzbs
 
-# 🗂️ Estructura del repositorio
+# 🔎 Main Objectives
+
+Build a graphical interface with a recommendation system that helps users find the movie they are looking for.
+
+# 🗂️ Repository Structure
 
 Proyecto-Individual-N1/
 
-├── APIs.py                   # Archivo con las funciones en python
+├── APIs.py # Python file with the functions
 
-├── EDA.ipynb                 # Archivo con el informe EDA (Análisis Exploratorio de los Datos)
+├── EDA.ipynb # Jupyter Notebook with the Exploratory Data Analysis
 
-├── ETL.ipynb                 # Archivo de Jupiter Notebook que contiene la Extracción, Transformación y Carga (Load) de los datos
+├── ETL.ipynb # Jupyter Notebook containing the Extract, Transform and Load process
 
-├── README.md                 # Documentación (este archivo)
+├── README.md # Documentation (this file)
 
-├── cast.csv                  # Archivo csv con la información de los elencos
+├── cast.csv # CSV file with cast information
 
-├── crew.csv                  # Archivo csv con la información de la "crew", tripulación en español literal, se refiere a los directores, creadores de efectos visuales, animadores, y demás personas que trabajaron en el detrás de escena
+├── crew.csv # CSV file with crew information (directors, VFX creators, animators, and backstage workers)
 
-├── movies.csv                # Archivo csv con la información de las películas
+├── movies.csv # CSV file with movie information
 
-└── requeriments.txt          # Archivo de texto con los requerimientos de las funciones
+└── requeriments.txt # Text file with function requirements
 
-# ⚙️ Tecnologías y Herramientas
+# ⚙️ Technologies and Tools
 
-- **Render** (para deployar las funciones)
+- **Render (for deployment)**
 
-- **Jupyter Notebook** (para el EDA y el ETL)
-  
-- **Python 3.19** (librerías: FastAPI, APIRouter, pandas, JSONResponse, Response, json, cosine_similarity, TfidfVectorizer, MinMaxScaler y numpy)
+- **Jupyter Notebook (for EDA and ETL)**
 
-# 🔁 Tranformaciones del Excel:
+- **Python 3.19 (libraries: FastAPI, APIRouter, pandas, JSONResponse, Response, json, cosine_similarity, TfidfVectorizer, MinMaxScaler, and numpy)**
 
-Para el dataset "Credits" lo dividi en 2, en Cast y Crew para un mejor manejo de la información. Solamente dejé las columnas de: "movie_id", "cast_id","cast_character","actor_id","cast_name" en el caso de Cast  <br>
-Y en el caso de Crew solamente: "movie_id", "crew_department", "crew_id", "crew_job" y "crew_name". Por otro lado del dataset Movies solamente use las columnas: "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average" y "vote_count". <br>
-De cada Dataframe solamente dejé las primeras 2.000 filas. Luego rellene los campos de revenue y budget con 0, eliminé nulos de release_date y cree la nueva columna de return ("returncon"). Y cree la columna "release_year" con el año de "release_date".
+# 🔁 Excel Transformations
 
-# 📥 Instalación y Uso
+For the "Credits" dataset, I split it into Cast and Crew for better data handling.
+
+Cast: kept only the columns "movie_id", "cast_id", "cast_character", "actor_id", "cast_name".
+
+Crew: kept only "movie_id", "crew_department", "crew_id", "crew_job", "crew_name".
+
+Movies: used only "budget", "id", "popularity", "release_date", "revenue", "runtime", "title", "vote_average", "vote_count".
+
+I limited each dataframe to the first 2,000 rows. Then, I filled missing values in revenue and budget with 0, removed nulls in release_date, created a new column "returncon" (revenue/budget), and extracted "release_year" from "release_date".
+
+# 📥 Installation and Usage
 ```
 git clone https://github.com/JnPFernandez/Proyecto-Individual-N1.git
 cd Proyecto-Individual-2
 ```
-- Deployar en Render
+- Deploy on Render
 
-- Navegar las diferentes funciones
+- Browse the different functions
 
-# 👾 Descripción de las funciones
+# 👾 Function Descriptions
 
-- En **cantidad_filmaciones_mes**, cree un diccionario relacionando los meses str con un numero. Use lower para pasar a minuscula y evitar problemas con mayusculas y minusculas. Si el mes ingresado no era valido, use if para devolver un error en ese caso.
-Luego filtré el df de movies para contar cuántas peliculas fueron estrenadas en el mismo mes que se ingreso con las funciones .dt.month y .shape[0], y lo asigne en una variable de tipo entero nueva llamada "cantidad".
-Y luego retorne el resultado.
+**Cantidad_filmaciones_mes**:
+Created a dictionary mapping month names (string) to numbers. Used .lower() to avoid case sensitivity issues. If the input month was invalid, returned an error. Then filtered the movies dataframe to count how many movies were released in that month using .dt.month and .shape[0], stored the result in a new integer variable "cantidad", and returned it.
 
-- En **cantidad_filmaciones_dia**, hice basicamente el mismo proceso que en la función anterior con la diferencia que en vez de la función dt.month, use la función dt.dayofweek.
+**Cantidad_filmaciones_dia**:
+Similar process to the previous function, but used .dt.dayofweek instead of .dt.month.
 
-- En **score_titulo**, filtre el dataset en "title" buscando la fila que coincida con el titulo insertado, y los valores los guarde en un nuevo df llamado "pelicula". Con .iloc[0] solamente toma los valores de la primera pelicula, por si hay valores repetidos, que es improbable pero bueno,por las dudas.
-Y por último la función retorna el titulo, el año y el score.
+**Score_titulo**:
+Filtered the dataset by "title" to match the input movie title and stored it in a new dataframe "pelicula". With .iloc[0], selected only the first match in case of duplicates. Returned the title, release year, and score.
 
-- En **votos_titulo**, seleccionamos la primera coincidencia con el titulo con .iloc y extraemos las columnas necesarias para la respuesta: "title", "release_date", "vote_count" y "vote_average". Todo esto lo guardamos en una serie llamada "pelicula". Usamos un if para devolver unicamente las peliculas con más de 2.000 votos. Luego pasamos pelicula a diccionario. De "release_date" sacamos unicamente el año con la función .year. Y por último retornamos la respuesta.
+**Votos_titulo**:
+Selected the first match by title with .iloc and extracted "title", "release_date", "vote_count", "vote_average". Stored it in "pelicula". Used an if to return only movies with more than 2,000 votes. Extracted only the year from "release_date" and returned the response as a dictionary.
 
-- En **get_actor**, primero filtramos el df Cast buscando cuál coincide con el nombre dado usando la función .contains, ignoramos mayusculas y minnusculas con "case=fasle" y por otro lado usamos "na=false" para que los valores Nan sean tomados como Falsos para evitar errores, osea que son detectados por contains como una no coincidencia con el titulo dado, todo esto lo guardamos en un nuevo df llamado "peliculas_actor". Luego hice un merge entre este nuevo df y el df de movies, trayendo toda la información de movies usando como conector "movie_id"(cast) e "id"(movies). Esto lo almacene en un nuevo df llamado "peliculas". Luego use len para contar la cantidad de peliculas que tenía el actor y lo guarde en un int "cantidad_peliculas". Después calcule una nueva variable float "retorno_total" sumando los retornos de las peliculas con la función .sum. Y retorno_promedio, diviendo retorno total por cantidad de peliculas. Y por último el retorno.
+**Get_actor**:
+Filtered the Cast dataframe with .contains to find rows matching the given actor name (ignoring case and handling NaN with na=False). Stored results in "peliculas_actor". Merged with movies dataframe using "movie_id" and "id". Counted the number of movies with len() and stored as "cantidad_peliculas". Calculated total return with .sum() and average return by dividing total return by movie count. Returned these results.
 
-- En **get_director**, primero, del df de crew, filtramos unicamente donde indique que el trabajo es de director en la columna "crew_job" y buscamos que peliculas contienen al director. Luego calculamos el retorno total del director con returncon y la función .sum y la guardamos en la nueva variable float "retorno_total". Después un paso muy importante, cree la lista "peliculas_info" que luego la vamos a retornar. Use un for iterando sobre las peliculas del director, agregando con la función .append la información de cada pelicula a la lista "peliculas_info", información sería especificamente las columnas "title", "release_date", "returncon", "budget" y "revenue". Y por ultimo retornamos el nombre del director, su retorno total y la información sobre sus peliculas.
+**Get_director**:
+Filtered the Crew dataframe to include only rows where "crew_job" = "Director". Retrieved all movies directed by that person. Calculated total return with .sum() on "returncon". Created the list "peliculas_info", iterated through the director’s movies with a for loop, and appended details ("title", "release_date", "returncon", "budget", "revenue") for each one. Returned the director’s name, total return, and detailed movie info.
 
-# 📬 Contacto
+# 📬 Contact
 
-Correo: juanpablofernandez132@gmail.com
+Email: juanpablofernandez132@gmail.com
 
 LinkedIn: linkedin.com/in/juan-pablo-fernández-608a95217/
 
-Youtube: https://www.youtube.com/@JuanPabloFern%C3%A1ndez-e6e
+YouTube: https://www.youtube.com/@JuanPabloFern%C3%A1ndez-e6e
