@@ -1,4 +1,4 @@
-<h1 align="center">**MVP Movie Recommendation System**</h1>
+<h1 align="center">MVP Movie Recommendation System</h1>
 
 # ✏️ Project Description
 
