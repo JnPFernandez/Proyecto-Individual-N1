@@ -88,6 +88,6 @@ Filtered the Crew dataframe to include only rows where "crew_job" = "Director". 
 
 Email: juanpablofernandez132@gmail.com
 
-LinkedIn: linkedin.com/in/juan-pablo-fernández-608a95217/
+LinkedIn: linkedin.com/in/jpfv2/
 
 YouTube: https://www.youtube.com/@JuanPabloFern%C3%A1ndez-e6e
