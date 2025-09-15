@@ -47,7 +47,7 @@ Proyecto-Individual-N1/
 
 For the "Credits" dataset, I split it into Cast and Crew for better data handling.
 
-Cast: kept only the columns "movie_id", "cast_id", "cast_character", "actor_id", "cast_name".
+**Cast: kept only the columns "movie_id", "cast_id", "cast_character", "actor_id", "cast_name".
 
 Crew: kept only "movie_id", "crew_department", "crew_id", "crew_job", "crew_name".
 
